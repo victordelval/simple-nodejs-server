@@ -1,0 +1,26 @@
+{
+  "name": "simple-nodejs-server",
+  "version": "1.0.0",
+  "description": "Simple NodeJS server with the http module to serve local data in the development environment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victordelval/simple-nodejs-server.git"
+  },
+  "keywords": [
+    "nodejs",
+    "server",
+    "http",
+    "api",
+    "json"
+  ],
+  "author": "Víctor del Val",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victordelval/simple-nodejs-server/issues"
+  },
+  "homepage": "https://github.com/victordelval/simple-nodejs-server#readme"
+}
