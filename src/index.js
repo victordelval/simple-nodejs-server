@@ -2,17 +2,22 @@ import http from 'http'
 import fs from 'fs'
 
 
-const server = http.createServer((request, response) => {
+const server = http.createServer((req, res) => {
+
+    // Header setup (content is json, and cors is allowed)
+    res.writeHead(200, {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+    })
+
+    // read file async
     let file = `./countries.json`
-
-    response.writeHead(200, { 'Content-Type': 'application/json'})
-
     fs.readFile(file, (err, content) => {
         if (err) {
             return console.log(err)
         }
-        response.write(JSON.stringify(JSON.parse(content)))
-        response.end()
+        res.write(JSON.stringify(JSON.parse(content)))
+        res.end()
     })
 })
 
